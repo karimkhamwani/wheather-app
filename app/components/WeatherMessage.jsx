@@ -4,7 +4,11 @@ var WeatherMessage = React.createClass({
   render : function(){
     var {temp, location} = this.props;
     return(
-      <h3>Location is {location} temperture is {temp}</h3>
+            <div>
+        <div className="panel callout radius">
+        <h3>Temperture in {location} is {temp}</h3>
+        </div>
+      </div>
     );
   }
 })

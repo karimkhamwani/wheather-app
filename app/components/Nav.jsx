@@ -1,6 +1,10 @@
 var React = require('react')
 var {Link, IndexLink} = require('react-router')
 var Nav = React.createClass({
+    onSearch : function(e){
+      e.preventDefault();
+      alert("not yet wired up")
+    },
     render: function() {
         return (
             <div className="top-bar">
@@ -18,7 +22,18 @@ var Nav = React.createClass({
                         </li>
                     </ul>
                 </div>
-                <div className="top-bar-right"></div>
+                <div className="top-bar-right">
+                  <form onSubmit={this.onSearch}>
+                    <ul className="menu">
+                      <li>
+                        <input type="search" placeholder="search weather"/>
+                      </li>
+                      <li>
+                        <input type="submit" className="button" value="Get weather"/>
+                      </li>
+                    </ul>
+                  </form>
+                </div>
             </div>
         );
     }
